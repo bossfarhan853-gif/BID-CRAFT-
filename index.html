@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rankora — Compete for the Crown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#7C3AED',
+              secondary: '#2563EB',
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        background: #05070D;
+        color: #F1F5F9;
+        -webkit-font-smoothing: antialiased;
+      }
+      .card {
+        background: linear-gradient(180deg, rgba(17,24,39,0.95) 0%, rgba(11,15,26,0.98) 100%);
+        border: 1px solid rgba(51,65,85,0.45);
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+      .card:hover {
+        border-color: rgba(124,58,237,0.4);
+        box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+      }
+      .rank-1 { background: linear-gradient(135deg, #7C3AED 0%, #4F46E5 100%); }
+      .rank-other { background: rgba(30,41,59,0.85); border: 1px solid rgba(71,85,105,0.5); }
+      .btn-primary {
+        background: linear-gradient(135deg, #7C3AED, #6D28D9);
+        box-shadow: 0 4px 16px rgba(124,58,237,0.3);
+      }
+      .btn-primary:hover { filter: brightness(1.07); }
+      .demo-pill {
+        background: rgba(245,158,11,0.08);
+        border: 1px solid rgba(245,158,11,0.3);
+        color: #FBBF24;
+      }
+    </style>
+  </head>
+  <body class="bg-[#05070D] text-slate-100">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
